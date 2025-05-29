@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 function Hero() {
   const [loading, setLoading] = useState(false);
@@ -65,7 +64,8 @@ function Hero() {
     const timer = setTimeout(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
-  });
+    return () => clearTimeout(timer); // cleanup
+  }, [timeLeft]);
 
   return (
     <section
@@ -75,7 +75,7 @@ function Hero() {
       data-aos-duration="1300"
       data-aos-once="true"
     >
-      <img className="hero-image" src="images/backgroundAbstarctV1.png" />
+      <img className="hero-image" src="images/backgroundAbstarctV1.png" alt="Background" />
 
       <div
         className="hero row fade-up"
@@ -85,7 +85,7 @@ function Hero() {
       >
         <div className="left col-lg-6"></div>
 
-        {/* Responsive Right Section */}
+        {/* Right Section */}
         <div className="right col-lg-6 flex flex-col items-center justify-center text-center px-4 md:items-center md:text-center">
           <div
             className="title fade-up"
@@ -106,15 +106,15 @@ function Hero() {
             <br />
           </div>
 
+          {/* Devfolio Button with responsive margin */}
           <button
-            className="apply-button"
+            className="apply-button mt-4 sm:mt-6 md:mt-4"
             data-hackathon-slug="girlathon"
             data-button-theme="light"
             style={{
               height: "44px",
               width: "312px",
               zIndex: "100",
-              marginTop: "1rem",
             }}
           >
             Apply with devfolio
