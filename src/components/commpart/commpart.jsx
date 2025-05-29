@@ -107,7 +107,13 @@ export default function CommPart() {
 
       {/* Community Partners Section */}
       {/* Community Partners Section */}
-<section id="COMMUNITY_PARTNERS" className="commSec py-5" data-aos="fade-up" data-aos-offset="150">
+<section
+  id="COMMUNITY_PARTNERS"
+  className="commSec"
+  data-aos="fade-up"
+  data-aos-offset="150"
+  style={{ paddingTop: "3rem", paddingBottom: "0" }} // adjust as needed
+>
   <Container>
     <Row className="mb-4">
       <Col xs={12}>
@@ -128,22 +134,24 @@ export default function CommPart() {
         sm={8}
         md={6}
         lg={5}
-        className="text-center d-flex justify-content-center"
+        className="text-center d-flex flex-column align-items-center"
         data-aos="zoom-in"
         data-aos-delay="400"
       >
         <a
           href="https://www.lenienttree.com"
           target="_blank"
-          className="card1 lighter-sponsor"
+          className="card1 lighter-sponsor d-flex justify-content-center text-decoration-none mb-2"
           rel="noreferrer"
         >
           <img
             src="/images/ltree.png"
-            alt="LTree Logo"
+            alt="Lenient Tree Logo"
             className="sponsor-img responsive-img"
           />
         </a>
+
+        <p className="text-white fw-semibold mt-1 mb-0">Lenient Tree</p>
       </Col>
     </Row>
   </Container>

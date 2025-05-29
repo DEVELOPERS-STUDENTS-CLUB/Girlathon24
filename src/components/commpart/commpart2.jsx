@@ -53,7 +53,7 @@ export default function PreviousSponsors() {
       data-aos-duration="1300"
       data-aos-once="true"
     >
-      Previous Sponsors
+      Previous Partners
     </h1>
   </Col>
           </Row>
